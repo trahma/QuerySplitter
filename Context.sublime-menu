@@ -11,6 +11,11 @@
             "id"      : "url merge",
             "caption" : "Url Merge",
             "command" : "url_merge"
+        },
+        {
+            "id"      : "view in browser",
+            "caption" : "View URL in Browser",
+            "command" : "view_in_browser"
         }
     ]
 }]

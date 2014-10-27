@@ -1,4 +1,4 @@
-import sublime, sublime_plugin
+import sublime, sublime_plugin, webbrowser
 
 def selections(view, default_to_all=True):
     """Return all non-empty selections in view
@@ -31,3 +31,12 @@ class UrlMergeCommand(sublime_plugin.TextCommand):
         for region in selections(view):
             s = view.substr(region)
             view.replace(edit, region, s.replace("\n&", "&").replace("\n?", "?"))
+
+class ViewInBrowserCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        """Main plugin logic for the 'viewinbrowser' command.
+        """
+        view = self.view
+        for region in selections(view):
+            s = view.substr(region)
+            webbrowser.open_new_tab(s.replace("\n&", "&").replace("\n?", "?"))
