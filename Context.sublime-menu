@@ -1,0 +1,16 @@
+[{
+    "id" : "url split",
+    "caption" : "Query Splitter",
+    "children" : [
+        {
+            "id"      : "url split",
+            "caption" : "Url Split",
+            "command" : "url_split"
+        },
+        {
+            "id"      : "url merge",
+            "caption" : "Url Merge",
+            "command" : "url_merge"
+        }
+    ]
+}]
